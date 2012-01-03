@@ -11,13 +11,13 @@
 </ol>
 <strong>Dependencies</strong>
 <ul>
-    <li><strong>ASP.NET MVC 3 (Visual Studio 2010)</strong></li>
-    <li><strong>IIS 7 Recommended Configuration</strong></li>
-    <li><strong>Microsoft Visual Studio 2010</strong></li>
-    <li><strong>Windows Azure SDK for .NET - November 2011</strong></li>
-    <li><strong>Windows Identity Foundation Runtime</strong></li>
-    <li><strong>Windows Phone SDK 7.1</strong></li>
-    <li><strong>Windows PowerShell 2.0</strong></li>
+    <li>ASP.NET MVC 3 (Visual Studio 2010)</li>
+    <li>IIS 7 Recommended Configuration</li>
+    <li>Microsoft Visual Studio 2010</li>
+    <li>Windows Azure SDK for .NET - November 2011</li>
+    <li>Windows Identity Foundation Runtime</li>
+    <li>Windows Phone SDK 7.1</li>
+    <li>Windows PowerShell 2.0</li>
 </ul>
 <h3>NuGet Packages</h3>
 <p>Here is the complete list of NuGet packages supported by this repository.
