@@ -1,4 +1,4 @@
-<h2>Windows Azure Toolkit for Windows Phone</h2>
+<h1>Windows Azure Toolkit for Windows Phone</h1>
 <h3>Source code for NuGet packages</h3>
 <p>This repository contains all the source code used by the Windows Phone &amp; Windows Azure NuGet packages.</p>
 
