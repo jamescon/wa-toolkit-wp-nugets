@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7B738CF7-EA66-4D92-B185-EA41286EEE73}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Microsoft.WindowsAzure.Samples.CloudServices.Notifications.Sql</RootNamespace>
+    <AssemblyName>CloudServices.Notifications.Sql</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityDataModel">
+      <HintPath>..\packages\WebApi.OData.0.6.0\lib\40-Full\EntityDataModel.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.4.2.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationServer.Http">
+      <HintPath>..\packages\WebApi.0.6.0\lib\40-Full\Microsoft.ApplicationServer.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationServer.HttpEnhancements">
+      <HintPath>..\packages\WebApi.Enhancements.0.6.0\lib\40-Full\Microsoft.ApplicationServer.HttpEnhancements.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Spatial">
+      <HintPath>..\packages\WebApi.OData.0.6.0\lib\40-Full\Microsoft.Data.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Json">
+      <HintPath>..\packages\JsonValue.0.6.0\lib\40\Microsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Net.Http.Formatting">
+      <HintPath>..\packages\HttpClient.0.6.0\lib\40\Microsoft.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Net.Http.Formatting.OData">
+      <HintPath>..\packages\WebApi.OData.0.6.0\lib\40-Full\Microsoft.Net.Http.Formatting.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Runtime.Serialization.Internal">
+      <HintPath>..\packages\WebApi.0.6.0\lib\40-Full\Microsoft.Runtime.Serialization.Internal.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Server.Common">
+      <HintPath>..\packages\WebApi.0.6.0\lib\40-Full\Microsoft.Server.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ServiceModel.Internal">
+      <HintPath>..\packages\WebApi.0.6.0\lib\40-Full\Microsoft.ServiceModel.Internal.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.OData">
+      <HintPath>..\packages\WebApi.OData.0.6.0\lib\40-Full\System.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\HttpClient.0.6.0\lib\40\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Activation" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlEndpointTableRow.cs" />
+    <Compile Include="SqlEndpointContext.cs" />
+    <Compile Include="SqlEndpointRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CloudServices.Notifications.Common\CloudServices.Notifications.Common.csproj">
+      <Project>{C44882D7-4FA1-4A6E-9AC4-80B2E9D61791}</Project>
+      <Name>CloudServices.Notifications.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CloudServices.Notifications\CloudServices.Notifications.csproj">
+      <Project>{AF845440-F18A-4E14-AFAA-3C8F2C5C25C0}</Project>
+      <Name>CloudServices.Notifications</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>$(ProjectDir)..\NuGet\NuGet.exe install $(ProjectDir)packages.config -OutputDirectory $(ProjectDir)..\packages\</PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

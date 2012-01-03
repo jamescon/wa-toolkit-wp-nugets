@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010 Express for Windows Phone
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phone.Notifications", "Phone.Notifications\Phone.Notifications.csproj", "{5B0CB1B3-3EBA-469A-91F3-BE2EC7682BAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phone.Identity.AccessControl", "Phone.Identity.AccessControl\Phone.Identity.AccessControl.csproj", "{F6F3C2ED-4A74-4836-9316-945357C575D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phone.Identity.Membership", "Phone.Identity.Membership\Phone.Identity.Membership.csproj", "{E3F751E9-C417-4DF4-899F-69F1628B2979}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phone.Storage", "Phone.Storage\Phone.Storage.csproj", "{B07FCEC6-A640-49CF-A8B0-28C3CABC3F4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data.Services.Client", "Data.Services.Client\Data.Services.Client.csproj", "{4FE8D3CE-A4D7-426A-9D51-E22DC4D470A9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5B0CB1B3-3EBA-469A-91F3-BE2EC7682BAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B0CB1B3-3EBA-469A-91F3-BE2EC7682BAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B0CB1B3-3EBA-469A-91F3-BE2EC7682BAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B0CB1B3-3EBA-469A-91F3-BE2EC7682BAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6F3C2ED-4A74-4836-9316-945357C575D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6F3C2ED-4A74-4836-9316-945357C575D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6F3C2ED-4A74-4836-9316-945357C575D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6F3C2ED-4A74-4836-9316-945357C575D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3F751E9-C417-4DF4-899F-69F1628B2979}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3F751E9-C417-4DF4-899F-69F1628B2979}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3F751E9-C417-4DF4-899F-69F1628B2979}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3F751E9-C417-4DF4-899F-69F1628B2979}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B07FCEC6-A640-49CF-A8B0-28C3CABC3F4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B07FCEC6-A640-49CF-A8B0-28C3CABC3F4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B07FCEC6-A640-49CF-A8B0-28C3CABC3F4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B07FCEC6-A640-49CF-A8B0-28C3CABC3F4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FE8D3CE-A4D7-426A-9D51-E22DC4D470A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FE8D3CE-A4D7-426A-9D51-E22DC4D470A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FE8D3CE-A4D7-426A-9D51-E22DC4D470A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FE8D3CE-A4D7-426A-9D51-E22DC4D470A9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

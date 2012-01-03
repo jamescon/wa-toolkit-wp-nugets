@@ -1,0 +1,79 @@
+﻿<UserControl x:Class="Microsoft.WindowsAzure.Samples.Phone.Identity.Membership.MembershipSignIn"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:converters="clr-namespace:Microsoft.WindowsAzure.Samples.Phone.Identity.Membership.Converters;assembly=Phone.Identity.Membership"
+             mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    d:DesignHeight="480" d:DesignWidth="480"
+    Loaded="OnLoaded"
+             x:Name="MembershipSignInControl">
+
+    <UserControl.Resources>
+        <converters:BooleanVisibilityConverter x:Key="BooleanVisibilityConverter" />
+        <converters:MembershipSignInModesEnumVisibilityConverter x:Key="MembershipSignInModeEnumVisibilityConverter" />
+    </UserControl.Resources>
+    
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <Grid>
+                <!-- LogOn -->
+                <StackPanel Orientation="Vertical" Visibility="{Binding CurrentMode, Converter={StaticResource MembershipSignInModeEnumVisibilityConverter}, ConverterParameter=LogOn}">
+                    <TextBlock Text="Enter your credentials to log in." FontSize="{StaticResource PhoneFontSizeMedium}" FontFamily="{StaticResource PhoneFontFamilyNormal}" LineHeight="31" LineStackingStrategy="BlockLineHeight" Foreground="{StaticResource PhoneForegroundBrush}" TextWrapping="Wrap" Margin="12,0,24,24"/>
+
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="Username" FontSize="{StaticResource PhoneFontSizeNormal}" FontFamily="{StaticResource PhoneFontFamilyNormal}" VerticalAlignment="Top" LineHeight="31" LineStackingStrategy="BlockLineHeight" Foreground="{StaticResource PhoneSubtleBrush}" TextWrapping="Wrap" Margin="12,0,12,-5" />
+                        <TextBox x:Name="LogOnUserName" Text="{Binding UserName, Mode=TwoWay}" KeyUp="OnLogOnTextBoxKeyUp" />
+                    </StackPanel>
+
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="Password" FontSize="{StaticResource PhoneFontSizeNormal}" FontFamily="{StaticResource PhoneFontFamilyNormal}" VerticalAlignment="Top" LineHeight="31" LineStackingStrategy="BlockLineHeight" Foreground="{StaticResource PhoneSubtleBrush}" TextWrapping="Wrap" Margin="12,0,12,-5" />
+                        <PasswordBox x:Name="LogOnPassword" Password="{Binding Password, Mode=TwoWay}" KeyUp="OnLogOnTextBoxKeyUp" />
+                    </StackPanel>
+
+                    <CheckBox IsChecked="{Binding RememberMe, Mode=TwoWay}" Content="Remember me" Foreground="{StaticResource PhoneForegroundBrush}" />
+                </StackPanel>
+
+                <!-- Register -->
+                <StackPanel Orientation="Vertical" Visibility="{Binding CurrentMode, Converter={StaticResource MembershipSignInModeEnumVisibilityConverter}, ConverterParameter=Register}">
+                    <TextBlock Text="Use the form below to create a new user." FontSize="{StaticResource PhoneFontSizeMedium}" FontFamily="{StaticResource PhoneFontFamilyNormal}" LineHeight="31" LineStackingStrategy="BlockLineHeight" Foreground="{StaticResource PhoneForegroundBrush}" TextWrapping="Wrap" Margin="12,0,24,24"/>
+
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="Choose a username" FontSize="{StaticResource PhoneFontSizeNormal}" FontFamily="{StaticResource PhoneFontFamilyNormal}" VerticalAlignment="Top" LineHeight="31" LineStackingStrategy="BlockLineHeight" Foreground="{StaticResource PhoneSubtleBrush}" TextWrapping="Wrap" Margin="12,0,12,-5" />
+                        <TextBox x:Name="RegisterUserName" Text="{Binding UserName, Mode=TwoWay}" KeyUp="OnRegisterTextBoxKeyUp" />
+                    </StackPanel>
+
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="What's your email address?" FontSize="{StaticResource PhoneFontSizeNormal}" FontFamily="{StaticResource PhoneFontFamilyNormal}" VerticalAlignment="Top" LineHeight="31" LineStackingStrategy="BlockLineHeight" Foreground="{StaticResource PhoneSubtleBrush}" TextWrapping="Wrap" Margin="12,0,12,-5" />
+                        <TextBox x:Name="RegisterEmail" Text="{Binding Email, Mode=TwoWay}" KeyUp="OnRegisterTextBoxKeyUp" />
+                    </StackPanel>
+
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="Pick a password" FontSize="{StaticResource PhoneFontSizeNormal}" FontFamily="{StaticResource PhoneFontFamilyNormal}" VerticalAlignment="Top" LineHeight="31" LineStackingStrategy="BlockLineHeight" Foreground="{StaticResource PhoneSubtleBrush}" TextWrapping="Wrap" Margin="12,0,12,-5" />
+                        <PasswordBox x:Name="RegisterPassword" Password="{Binding Password, Mode=TwoWay}" KeyUp="OnRegisterTextBoxKeyUp" />
+                    </StackPanel>
+
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="Confirm your password" FontSize="{StaticResource PhoneFontSizeNormal}" FontFamily="{StaticResource PhoneFontFamilyNormal}" VerticalAlignment="Top" LineHeight="31" LineStackingStrategy="BlockLineHeight" Foreground="{StaticResource PhoneSubtleBrush}" TextWrapping="Wrap" Margin="12,0,12,-5" />
+                        <PasswordBox x:Name="RegisterConfirmPassword" Password="{Binding ConfirmPassword, Mode=TwoWay}" KeyUp="OnRegisterTextBoxKeyUp" />
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+
+            <StackPanel Orientation="Horizontal">
+                <Button IsEnabled="{Binding IsIdle}" Content="submit" Click="OnSubmitMembershipOperationButtonClick" VerticalAlignment="Top" Width="228" />
+                <Button IsEnabled="{Binding IsIdle}" Content="{Binding CurrentOperation}" Click="OnChangeCurrentModeButtonClick" Visibility="{Binding ControlMode, ElementName=MembershipSignInControl, Converter={StaticResource MembershipSignInModeEnumVisibilityConverter}, ConverterParameter=LogOnAndRegister}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="228" />
+            </StackPanel>
+
+            <!-- Progress and status bars -->
+            <StackPanel Margin="10,5" Orientation="Vertical">
+                <TextBlock Text="{Binding Message}" HorizontalAlignment="Left" TextWrapping="Wrap" />
+                <ProgressBar Height="20" IsIndeterminate="True" Visibility="{Binding IsBusy, Converter={StaticResource BooleanVisibilityConverter}}" />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+
+</UserControl>

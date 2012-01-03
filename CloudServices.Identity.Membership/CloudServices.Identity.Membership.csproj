@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6537020B-EDF2-4823-BCDC-430B334B876B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Microsoft.WindowsAzure.Samples.CloudServices.Identity.Membership</RootNamespace>
+    <AssemblyName>CloudServices.Identity.Membership</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AspNet.SuppressFormsRedirect">
+      <HintPath>..\packages\aspnet.suppressformsredirect.0.0.1.4\lib\40\AspNet.SuppressFormsRedirect.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityDataModel">
+      <HintPath>..\packages\WebApi.OData.0.6.0\lib\40-Full\EntityDataModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationServer.Http">
+      <HintPath>..\packages\WebApi.0.6.0\lib\40-Full\Microsoft.ApplicationServer.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationServer.HttpEnhancements">
+      <HintPath>..\packages\WebApi.Enhancements.0.6.0\lib\40-Full\Microsoft.ApplicationServer.HttpEnhancements.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Spatial">
+      <HintPath>..\packages\WebApi.OData.0.6.0\lib\40-Full\Microsoft.Data.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Json">
+      <HintPath>..\packages\JsonValue.0.6.0\lib\40\Microsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Net.Http.Formatting">
+      <HintPath>..\packages\HttpClient.0.6.0\lib\40\Microsoft.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Net.Http.Formatting.OData">
+      <HintPath>..\packages\WebApi.OData.0.6.0\lib\40-Full\Microsoft.Net.Http.Formatting.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Runtime.Serialization.Internal">
+      <HintPath>..\packages\WebApi.0.6.0\lib\40-Full\Microsoft.Runtime.Serialization.Internal.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Server.Common">
+      <HintPath>..\packages\WebApi.0.6.0\lib\40-Full\Microsoft.Server.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ServiceModel.Internal">
+      <HintPath>..\packages\WebApi.0.6.0\lib\40-Full\Microsoft.ServiceModel.Internal.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OData">
+      <HintPath>..\packages\WebApi.OData.0.6.0\lib\40-Full\System.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <HintPath>..\packages\HttpClient.0.6.0\lib\40\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Activation" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebApi.Membership">
+      <HintPath>..\packages\WebApi.Membership.0.0.3.0\lib\40\WebApi.Membership.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConfigurationExtensions.cs" />
+    <Compile Include="Properties\GlobalSuppressions.cs" />
+    <Compile Include="MembershipService.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RouteExtensions.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="LogOn.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>$(ProjectDir)..\NuGet\NuGet.exe install $(ProjectDir)packages.config -OutputDirectory $(ProjectDir)..\packages\</PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

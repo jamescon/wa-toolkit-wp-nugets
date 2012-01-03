@@ -1,0 +1,51 @@
+﻿// ----------------------------------------------------------------------------------
+// Microsoft Developer & Platform Evangelism
+// 
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// 
+// THIS CODE AND INFORMATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, 
+// EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES 
+// OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR PURPOSE.
+// ----------------------------------------------------------------------------------
+// The example companies, organizations, products, domain names,
+// e-mail addresses, logos, people, places, and events depicted
+// herein are fictitious.  No association with any real company,
+// organization, product, domain name, email address, logo, person,
+// places, or events is intended or should be inferred.
+// ----------------------------------------------------------------------------------
+
+// This file is used by Code Analysis to maintain SuppressMessage 
+// attributes that are applied to this project.
+// Project-level suppressions either have no target or are given 
+// a specific target and scoped to a namespace, type, member, etc.
+//
+// To add a suppression to this file, right-click the message in the 
+// Error List, point to "Suppress Message(s)", and click 
+// "In Project Suppression File".
+// You do not need to add suppressions to this file manually.
+
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031:DoNotCatchGeneralExceptionTypes", Scope = "member", Target = "Microsoft.WindowsAzure.Samples.Phone.Identity.AccessControl.AccessControlServiceSignIn.#SignInWebBrowserControlScriptNotify(System.Object,Microsoft.Phone.Controls.NotifyEventArgs)", Justification = "Control should not throw exceptions, it will display status to users")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031:DoNotCatchGeneralExceptionTypes", Scope = "member", Target = "Microsoft.WindowsAzure.Samples.Phone.Identity.AccessControl.JsonIdentityProviderDiscoveryClient.#WebClientDownloadStringCompleted(System.Object,System.Net.DownloadStringCompletedEventArgs)", Justification = "Control should not throw exceptions, it will display status to users")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1034:NestedTypesShouldNotBeVisible", Scope = "type", Target = "Microsoft.WindowsAzure.Samples.Phone.Identity.AccessControl.ClaimTypes+Prip", Justification = "Maintain compatibility with WIF")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1056:UriPropertiesShouldNotBeStrings", Scope = "member", Target = "Microsoft.WindowsAzure.Samples.Phone.Identity.AccessControl.IdentityProviderInformation.#ImageUrl", Justification = "The property is needed for serialization purposes")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1056:UriPropertiesShouldNotBeStrings", Scope = "member", Target = "Microsoft.WindowsAzure.Samples.Phone.Identity.AccessControl.IdentityProviderInformation.#LoginUrl", Justification = "The property is needed for serialization purposes")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1056:UriPropertiesShouldNotBeStrings", Scope = "member", Target = "Microsoft.WindowsAzure.Samples.Phone.Identity.AccessControl.IdentityProviderInformation.#LogoutUrl", Justification = "The property is needed for serialization purposes")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "Spn", Scope = "member", Target = "Microsoft.WindowsAzure.Samples.Phone.Identity.AccessControl.ClaimTypes.#Spn", Justification = "Maintain compatibility with WIF")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "Sha", Scope = "member", Target = "Microsoft.WindowsAzure.Samples.Phone.Identity.AccessControl.SimpleWebToken.#HmacSha256TokenName", Justification = "Sha is a valid abreviation")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "Upn", Scope = "member", Target = "Microsoft.WindowsAzure.Samples.Phone.Identity.AccessControl.ClaimTypes.#Upn", Justification = "Maintain compatibility with WIF")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "Prip", Scope = "type", Target = "Microsoft.WindowsAzure.Samples.Phone.Identity.AccessControl.ClaimTypes+Prip", Justification = "Maintain compatibility with WIF")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "Upn", Scope = "member", Target = "Microsoft.WindowsAzure.Samples.Phone.Identity.AccessControl.ClaimTypes+Prip.#Upn", Justification = "Maintain compatibility with WIF")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1709:IdentifiersShouldBeCasedCorrectly", MessageId = "PPID", Scope = "member", Target = "Microsoft.WindowsAzure.Samples.Phone.Identity.AccessControl.ClaimTypes.#PPID", Justification = "Maintain compatibility with WIF")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1726:UsePreferredTerms", MessageId = "Login", Scope = "member", Target = "Microsoft.WindowsAzure.Samples.Phone.Identity.AccessControl.IdentityProviderInformation.#LoginUrl", Justification = "The property is needed for serialization purposes")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1726:UsePreferredTerms", MessageId = "Logout", Scope = "member", Target = "Microsoft.WindowsAzure.Samples.Phone.Identity.AccessControl.IdentityProviderInformation.#LogoutUrl", Justification = "The property is needed for serialization purposes")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope = "member", Target = "Microsoft.WindowsAzure.Samples.Phone.Identity.AccessControl.AccessControlServiceSignIn.#IdentityProviderListSelectionChanged(System.Object,System.Windows.Controls.SelectionChangedEventArgs)", Justification = "Is called in the xaml")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope = "member", Target = "Microsoft.WindowsAzure.Samples.Phone.Identity.AccessControl.AccessControlServiceSignIn.#NavigateToIdentityProvider(Microsoft.WindowsAzure.Samples.Phone.Identity.AccessControl.IdentityProviderInformation)", Justification = "Is called in the xaml")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope = "member", Target = "Microsoft.WindowsAzure.Samples.Phone.Identity.AccessControl.AccessControlServiceSignIn.#TextBlockMouseLeftButtonUp(System.Object,System.Windows.Input.MouseButtonEventArgs)", Justification = "Is called in the xaml")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope = "member", Target = "Microsoft.WindowsAzure.Samples.Phone.Identity.AccessControl.AccessControlServiceSignIn.#TextBlockMouseLeftButtonDown(System.Object,System.Windows.Input.MouseButtonEventArgs)", Justification = "Is called in the xaml")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope = "member", Target = "Microsoft.WindowsAzure.Samples.Phone.Identity.AccessControl.AccessControlServiceSignIn.#TextBlockMouseLeave(System.Object,System.Windows.Input.MouseEventArgs)", Justification = "Is called in the xaml")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope = "member", Target = "Microsoft.WindowsAzure.Samples.Phone.Identity.AccessControl.IdentityProviderInformationEventArgs.#.ctor(Microsoft.WindowsAzure.Samples.Phone.Identity.AccessControl.IdentityProviderInformation)", Justification = "Is called in the xaml")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope = "member", Target = "Microsoft.WindowsAzure.Samples.Phone.Identity.AccessControl.IdentityProviderInformationEventArgs.#IdentityProviderInformation", Justification = "Is called in the xaml")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1819:PropertiesShouldNotReturnArrays", Scope = "member", Target = "Microsoft.WindowsAzure.Samples.Phone.Identity.AccessControl.IdentityProviderInformation.#EmailAddressSuffixes", Justification = "The property is needed for serialization purposes")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "RequestSimpleWebTokenResponse", Scope = "member", Target = "Microsoft.WindowsAzure.Samples.Phone.Identity.AccessControl.AccessControlServiceSignIn.#SignInWebBrowserControlScriptNotify(System.Object,Microsoft.Phone.Controls.NotifyEventArgs)", Justification = "Adding this to Code Analysis Dictionary does not work with compound words.")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "ServiceNamespace", Scope = "member", Target = "Microsoft.WindowsAzure.Samples.Phone.Identity.AccessControl.AccessControlServiceSignIn.#GetSimpleWebToken()", Justification = "Adding this to Code Analysis Dictionary does not work with compound words.")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "SimpleWebTokenStore", Scope = "member", Target = "Microsoft.WindowsAzure.Samples.Phone.Identity.AccessControl.AccessControlServiceSignIn.#GetSimpleWebToken()", Justification = "Adding this to Code Analysis Dictionary does not work with compound words.")]
